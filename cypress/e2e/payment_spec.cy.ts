@@ -22,7 +22,7 @@ describe('payment', ()=>{
     // login
     cy.visit('http://localhost:3000');
     cy.findByRole('textbox', {name: /username/i}).type("johndoe");
-    crypto.findByLabelText('')
+    cy.findByLabelText('/password/i').type("s3cret");
 
     // check account balance
     // click on pay button
